@@ -35,11 +35,4 @@ public class UserServiceApplication {
                 .paths(PathSelectors.ant("/user/**")).build();
     }
 
-    @Bean
-    public CommandLineRunner init() {
-        return args -> {
-			AppUser user = AppUser.builder().nickName("Isti").firstName("István").lastName("Trautmann").password("ugyi").email("isti@gmail.com").build();
-			userRepository.save(user);
-        };
-    }
 }
